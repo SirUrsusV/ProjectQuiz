@@ -1,0 +1,52 @@
+﻿<Page x:Class="ProjectQuiz.AdminRedactUsers"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:ProjectQuiz"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="450" d:DesignWidth="800"
+	  Title="Редактирование учётных записей"
+      FontFamily="Constantia" FontSize="20">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto" MinWidth="150"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<!--Это область поиска пользователя-->
+		<ScrollViewer Grid.Column="0">
+			<StackPanel x:Name="StackPanel"/>
+		</ScrollViewer>
+		<!--Это область редактирование пользователя-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Логин: "  Grid.Row="0" Grid.Column="0"  Margin="10"/>
+                <TextBox x:Name="UserNameRedact"  Grid.Row="0" Grid.Column="1"  Margin="10" />
+
+                <TextBlock Text="Пароль: "  Grid.Row="1" Grid.Column="0"  Margin="10"/>
+                <TextBox x:Name="PasswordRedact"  Grid.Row="1" Grid.Column="1"  Margin="10" />
+                
+            </Grid>
+            <Button Content="Назад" Click="Exit_Click" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" FontSize="15"/>
+            <Button Content="Подтвердить" Click="Confirm_Click" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" FontSize="15"/>
+            <Button Content="Удалить учётную запись" Click="DeliteUser_Click"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" FontSize="15"/>
+        </Grid>
+
+    </Grid>
+</Page>

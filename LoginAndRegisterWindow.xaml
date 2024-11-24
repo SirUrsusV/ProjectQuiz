@@ -1,0 +1,61 @@
+﻿<Window x:Class="ProjectQuiz.LoginAndRegisterWindow"
+        x:Name="LRWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вход" Height="220" Width="600" MinHeight="220" MinWidth="210"
+        FontFamily="Constantia">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Login">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Логин:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+                    <TextBox Name="LoginUsername" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Пароль:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+                    <PasswordBox Name="LoginPassword" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                    <Button Content="Вход" Grid.Row="2"  Grid.ColumnSpan="2"  Click="LoginButton_Click"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Register">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Username:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+                    <TextBox Name="RegisterUsername" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Password:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+                    <PasswordBox Name="RegisterPassword" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Confirm Password:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+                    <PasswordBox Name="RegisterConfirmPassword" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                    <Button Content="Register" Grid.Row="4" Grid.ColumnSpan="2" Margin="5"  Click="RegisterButton_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
